@@ -1,5 +1,7 @@
 from rest_framework import serializers
-from .models import Companny
+from .models import Company
 class CompanySerializers(serializers.HyperlinkedModelSerializer):
     class Meta:
-        pass
+        model=Company
+        fields='__all__'
+        # fields=
