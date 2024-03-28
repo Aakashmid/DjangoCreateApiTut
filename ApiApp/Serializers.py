@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from .models import Company,Employee
 class CompanySerializers(serializers.HyperlinkedModelSerializer):
+    # company_id is only readable cant change using update api
     company_id=serializers.ReadOnlyField()
     class Meta:
         model=Company
